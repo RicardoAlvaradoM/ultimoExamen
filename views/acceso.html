@@ -1,0 +1,20 @@
+$def with(result)
+<table class="table">
+    <th>Nombre</th>
+    <th>No_Hab</th>
+    <th>Opciones</th>
+    $for row in result:
+    <tr>
+        <td>$row.Nombre</td>
+        <td>$row.No_Hab</td>
+        <td>
+            <a href="/ver/$row.id"><input id="botonVer" type="submit" value="Ver" /></a>
+            <a href="/editar/$row.id"><input id="botonVer" type="submit" value="Editar" /></a>
+            <a href="/eliminar/$row.id"><input id="botonVer" type="submit" value="Eliminar" /></a>
+        </td>
+    </tr>
+</table>
+<br>
+<form name="main" method="post" class="form">
+    <input id="botonNuevo" type="submit" value="Nuevo" />
+</form>
